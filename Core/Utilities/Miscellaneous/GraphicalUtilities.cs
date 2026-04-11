@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System.Text;
+using Microsoft.Xna.Framework;
 using Terraria;
 
 namespace Arcadia;
@@ -39,5 +40,26 @@ public static partial class ArcadiaUtils
         viewMatrix *= zoomScaleMatrix;
 
         projectionMatrix = Matrix.CreateOrthographicOffCenter(0f, width * zoom.X, 0f, height * zoom.Y, 0f, 1f) * zoomScaleMatrix;
+    }
+
+    /// <summary>
+    ///     Returns a colored message.
+    /// </summary>
+    public static string ColorMessage(string msg, Color color)
+    {
+        StringBuilder sb;
+        if (!msg.Contains('\n'))
+        {
+            sb = new StringBuilder(msg.Length + 12);
+            sb.Append("[c/").Append(color.Hex3()).Append(':').Append(msg).Append(']');
+        }
+        else
+        {
+            sb = new StringBuilder();
+            foreach (string newlineSlice in msg.Split('\n'))
+                sb.Append("[c/").Append(color.Hex3()).Append(':').Append(newlineSlice).Append(']').Append('\n');
+        }
+
+        return sb.ToString();
     }
 }
