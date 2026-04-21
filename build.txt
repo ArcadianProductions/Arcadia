@@ -10,4 +10,4 @@ includePDB = true
 dllReferences = StructureHelper
 modReferences = Daybreak, SubworldLibrary
 
-buildIgnore = .tml-build\*, .vs\*, Properties\*, *.tmp, *.csproj, *.user, obj\*, bin\*, lib\refs\*, *.config, .git\*, .github\*, LICENSE, *.md, .editorconfig, .gitignore, .gitattributes
+buildIgnore = .tml-build\*, .vs\*, Documents\*, Properties\*, *.tmp, *.csproj, *.user, obj\*, bin\*, lib\refs\*, *.config, .git\*, .github\*, LICENSE, *.md, .editorconfig, .gitignore, .gitattributes

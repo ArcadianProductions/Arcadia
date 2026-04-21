@@ -1,15 +1,11 @@
 # Arcadia Mod
 
-## Information
+## Information:
 The Arcadia Mod for Terraria, using tModLoader as its API.
 It is a general-purpose content and overhaul mod.
 
-## Developers
-- **Astra:** Owner, Programmer
+## Developers:
+- **Astra:** Owner, programmer, and artist.
 
-## Special Thanks
-- Lune, for contributing some sprites.
-- The Calamity Team, for allowing use of their code and inspiring the mod.
-- Tomat and the Gold Meridian Team, for providing a custom tModLoader SDK build.
-- The tModLoader API developers, for creating tModLoader.
-- Re-Logic, for creating Terraria.
+## Credits:
+Please refer to the [credits document (update link after pushing)](https://https://github.com/ArcadianProductions/TerrariaArcadiaMod/).

@@ -8,9 +8,6 @@ namespace Arcadia.Core.Globals.Items;
 
 public partial class ArcadiaGlobalItem : GlobalItem
 {
-    // Originally from the Calamity Mod source code.
-    // All credits are given to the Calamity Team.
-
     private static string[] MainTooltipBackupInsertionPositions =
     [
         "Material",
@@ -78,13 +75,8 @@ public partial class ArcadiaGlobalItem : GlobalItem
                 standardTooltipCount++;
             }
         }
-
-        // If there are no standard vanilla tooltip lines, then a different position needs
-        // to be selected for typical insertion.
-        bool noStandardTooltips = false;
         if (firstTooltipIndex == -1)
         {
-            noStandardTooltips = true;
             foreach (string lineName in MainTooltipBackupInsertionPositions)
             {
                 int idx = tooltips.FindIndex((line) => line.Name == lineName);

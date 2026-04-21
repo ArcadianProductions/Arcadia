@@ -18,7 +18,7 @@ namespace Arcadia.Core.Graphics.Primitives;
 /// <item>The second is a struct that allows you to choose a desired configuration of settings to use with the trail, to allow for customization.</item>
 /// <item>The third controls how many points are created for the trail, and the fourth determines whether the primitive is subsequently rendered.</item>
 /// </list>
-/// If you wish to use pixelation, you <b>MUST</b> make the NPC/Projectile inherit <see cref="IPixelatedPrimitiveRenderer"/> and use <see cref="IPixelatedPrimitiveRenderer.RenderPixelatedPrimitives"/> instead of predraw..<br/>
+/// If you wish to use pixelation, you <b>MUST</b> make the NPC or projectile inherit <see cref="IPixelatedPrimitiveRenderer"/> and use <see cref="IPixelatedPrimitiveRenderer.RenderPixelatedPrimitives"/> instead of predraw..<br/>
 /// You can also optionally specify a render layer with <see cref="IPixelatedPrimitiveRenderer.LayerToRenderTo"/>. It is <see cref="Enums.GeneralDrawLayer.BeforeNPCs"/> by default.
 /// </summary>
 [Autoload(Side = ModSide.Client)]
@@ -203,7 +203,7 @@ public sealed class PrimitiveRenderer : ModSystem
         else
             ArcadiaUtils.CalculatePerspectiveMatricies(out view, out projection);
 
-        var shaderToUse = MainSettings.Shader ?? GameShaders.Misc["CalamityMod:StandardPrimitiveShader"];
+        var shaderToUse = MainSettings.Shader ?? GameShaders.Misc["Arcadia:StandardPrimitiveShader"];
         shaderToUse.Shader.Parameters["uWorldViewProjection"].SetValue(view * projection);
         shaderToUse.Apply();
 
@@ -222,7 +222,7 @@ public sealed class PrimitiveRenderer : ModSystem
     }
     #endregion
 
-    #region Set Preperation
+    #region Preparation
     private static bool AssignPointsRectangleTrail(Vector2[] positions, PrimitiveSettings settings, int pointsToCreate)
     {
         // Don't smoothen the points unless explicitly told do so.
@@ -430,11 +430,11 @@ public sealed class PrimitiveRenderer : ModSystem
                 effectiveHalfWidth = Math.Max(Vector2.Distance(left, right) * 0.5f, Epsilon);
             }
 
-            // Guard against degenerate width
+            // Guard against degenerate width.
             effectiveHalfWidth = Math.Max(effectiveHalfWidth, Epsilon);
 
-            Vector2 leftCurrentTextureCoord = new Vector2(textureU, 0.5f - effectiveHalfWidth * 0.5f);
-            Vector2 rightCurrentTextureCoord = new Vector2(textureU, 0.5f + effectiveHalfWidth * 0.5f);
+            Vector2 leftCurrentTextureCoord = new(textureU, 0.5f - effectiveHalfWidth * 0.5f);
+            Vector2 rightCurrentTextureCoord = new(textureU, 0.5f + effectiveHalfWidth * 0.5f);
 
             MainVertices[VerticesIndex] = new VertexPosition2DColorTexture(left, vertexColor, leftCurrentTextureCoord, effectiveHalfWidth);
             VerticesIndex++;
@@ -541,7 +541,7 @@ public sealed class PrimitiveRenderer : ModSystem
             if (tangent.LengthSquared() <= Epsilon)
                 tangent = fallbackTangent.SafeNormalize(Vector2.UnitX);
 
-            Vector2 baseNormal = new Vector2(-tangent.Y, tangent.X);
+            Vector2 baseNormal = new(-tangent.Y, tangent.X);
             Vector2 normal;
 
             if (MainSettings.FrameTransportMode == PrimitiveFrameTransportMode.ParallelTransport && i > 0 && previousNormal.LengthSquared() > Epsilon)
@@ -549,7 +549,7 @@ public sealed class PrimitiveRenderer : ModSystem
                 Vector2 previousTangent = MainTangents[i - 1];
                 float cosine = MathHelper.Clamp(Vector2.Dot(previousTangent, tangent), -1f, 1f);
                 float sine = Cross(previousTangent, tangent);
-                Vector2 transported = new Vector2(
+                Vector2 transported = new(
                     cosine * previousNormal.X - sine * previousNormal.Y,
                     sine * previousNormal.X + cosine * previousNormal.Y
                 );
