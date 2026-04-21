@@ -8,4 +8,4 @@ It is a general-purpose content and overhaul mod.
 - **Astra:** Owner, programmer, and artist.
 
 ## Credits:
-Please refer to the [credits document (update link after pushing)](https://https://github.com/ArcadianProductions/TerrariaArcadiaMod/).
+Please refer to the [credits document](https://github.com/ArcadianProductions/TerrariaArcadiaMod/blob/master/Documents/CREDITS.md).
