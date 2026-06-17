@@ -2,9 +2,6 @@
 
 namespace Arcadia.Core.Globals.NPCs;
 
-// This code is originally from the Calamity Mod.
-// Credits are given to the Calamity Team.
-
 /// <summary>
 /// This attribute gives an NPC pierce resistance.
 /// </summary>
@@ -17,8 +14,6 @@ public sealed class HasPierceResistAttribute : Attribute
     /// </summary>
     public bool SingleHitbox { get; }
 
-    public HasPierceResistAttribute(bool singleHitbox = false)
-    {
+    public HasPierceResistAttribute(bool singleHitbox = false) =>
         SingleHitbox = singleHitbox;
-    }
 }

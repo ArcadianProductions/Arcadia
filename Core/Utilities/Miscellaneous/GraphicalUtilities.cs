@@ -6,9 +6,6 @@ namespace Arcadia;
 
 public static partial class ArcadiaUtils
 {
-    // Originally from the Calamity Mod source code.
-    // All credits are given to the Calamity Team.
-
     /// <summary>
     ///     Calculates perspective matrices for usage by vertex shaders.
     /// </summary>

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
 using Terraria.ModLoader;
 using Terraria.ModLoader.Core;
 
@@ -9,9 +8,6 @@ namespace Arcadia;
 
 public static partial class ArcadiaUtils
 {
-    // Originally from the Calamity Mod source code.
-    // All credits are given to the Calamity Team.
-
     public static IEnumerable<Type> GetEveryModsTypes() =>
         ModLoader.Mods.SelectMany(mod => AssemblyManager.GetLoadableTypes(mod.Code));
 

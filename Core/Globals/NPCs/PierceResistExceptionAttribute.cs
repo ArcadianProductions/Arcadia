@@ -2,9 +2,6 @@
 
 namespace Arcadia.Core.Globals.NPCs;
 
-// This code is originally from the Calamity Mod.
-// Credits are given to the Calamity Team.
-
 /// <summary>
 /// This attribute makes projectiles exempt from pierce resistance.
 /// </summary>
@@ -16,8 +13,6 @@ public sealed class PierceResistExceptionAttribute : Attribute
     /// </summary>
     public bool OnlyForSingleHitbox { get; }
 
-    public PierceResistExceptionAttribute(bool onlyForSingleHitbox = false)
-    {
+    public PierceResistExceptionAttribute(bool onlyForSingleHitbox = false) =>
         OnlyForSingleHitbox = onlyForSingleHitbox;
-    }
 }

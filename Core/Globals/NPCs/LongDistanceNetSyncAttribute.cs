@@ -2,9 +2,6 @@
 
 namespace Arcadia.Core.Globals.NPCs;
 
-// This code is originally from the Calamity Mod.
-// Credits are given to the Calamity Team.
-
 /// <summary>
 /// This attribute allows a ModNPC to always sync for their position and rotation data at least every 45 frames.
 /// </summary>

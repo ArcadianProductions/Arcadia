@@ -10,7 +10,7 @@ namespace Arcadia.Assets.Effects;
 [Autoload(Side = ModSide.Client)]
 public sealed class ArcadiaShaders : ModSystem
 {
-    private const string ShaderPath = "Effects/";
+    private const string ShaderPath = "Assets/Effects/";
     internal const string ShaderPrefix = "Arcadia:";
 
     internal static Asset<Effect> StandardPrimitiveShader;

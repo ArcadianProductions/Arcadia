@@ -12,7 +12,7 @@ namespace Arcadia.Content.UI;
 
 public class WindowTitles : ModSystem
 {
-    private static LocalizedText? _arcadiaModifiedText;
+    private static LocalizedText _arcadiaModifiedText;
     private static bool loaded;
 
     public override void PostSetupContent()

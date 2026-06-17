@@ -52,3 +52,13 @@ Shadethrower: {
 	DisplayName: Shadethrower
 	Tooltip: Releases a burst of shadow flames
 }
+
+RealityWarper: {
+	DisplayName: Reality Warper
+	Tooltip:
+		'''
+		Press [KEY] to teleport to the position of the mouse
+		Teleportation is disabled while Chaos State is active
+		Works while in the inventory
+		'''
+}

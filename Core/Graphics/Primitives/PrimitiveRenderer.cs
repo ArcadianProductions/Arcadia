@@ -856,7 +856,7 @@ public sealed class PrimitiveRenderer : ModSystem
             return;
 
         if (StartCapCenterIndex >= 0)
-            AddTriangle((short)(StartCapCenterIndex), 0, 1);
+            AddTriangle(StartCapCenterIndex, 0, 1);
 
         if (EndCapCenterIndex >= 0)
         {

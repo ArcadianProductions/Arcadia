@@ -1,5 +1,4 @@
 ﻿using Arcadia.Core.Graphics.Particles;
-
 using Terraria;
 using Terraria.ModLoader;
 

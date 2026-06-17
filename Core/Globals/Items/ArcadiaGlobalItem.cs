@@ -20,7 +20,7 @@ public partial class ArcadiaGlobalItem : GlobalItem
         set => flag[0] = value;
     }
 
-    public override GlobalItem Clone(Item? from, Item to)
+    public override GlobalItem Clone(Item from, Item to)
     {
         ArcadiaGlobalItem clone = (ArcadiaGlobalItem)base.Clone(from, to);
 

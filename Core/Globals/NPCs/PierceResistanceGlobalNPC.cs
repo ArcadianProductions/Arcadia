@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
-
 using Arcadia.Core.Balancing;
-
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;

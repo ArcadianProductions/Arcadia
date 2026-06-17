@@ -1,6 +1,5 @@
 ﻿using Arcadia.Core.Globals.Players;
 using Arcadia.Core.Globals.Projectiles;
-
 using Terraria;
 
 namespace Arcadia;

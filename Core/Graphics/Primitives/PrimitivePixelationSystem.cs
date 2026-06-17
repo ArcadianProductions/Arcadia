@@ -83,9 +83,7 @@ public class PrimitivePixelationSystem : ModSystem
     private void DrawToTargets()
     {
         if (Main.gameMenu)
-        {
             return;
-        }
 
         var beforeAllTiles = new List<IPixelatedPrimitiveRenderer>();
         var beforeSolidTiles = new List<IPixelatedPrimitiveRenderer>();
