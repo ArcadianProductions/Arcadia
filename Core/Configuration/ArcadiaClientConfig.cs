@@ -1,6 +1,5 @@
 ﻿using System.ComponentModel;
 using System.Runtime.Serialization;
-
 using Terraria;
 using Terraria.ModLoader.Config;
 

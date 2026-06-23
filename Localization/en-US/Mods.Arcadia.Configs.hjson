@@ -67,4 +67,13 @@ ArcadiaServerConfig: {
 			Disable this if you prefer quality-of-life mod recipe additions only.
 			'''
 	}
+
+	NerfExpertDebuffs: {
+		Label: "[i:AnkhCharm] Remove Increased Debuff Duration"
+		Tooltip:
+			'''
+			Disables Expert Mode doubling (and Master Mode tripling) the duration of debuffs on the player.
+			Arcadia is balanced around this setting being enabled.
+			'''
+	}
 }

@@ -3,21 +3,16 @@ using Arcadia.Core.Graphics.DrawLayers;
 using Arcadia.Core.Graphics.Pixelation;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-
 using ReLogic.Content;
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
-
 using Terraria;
 using Terraria.ModLoader;
 
 namespace Arcadia.Core.Graphics.Particles;
 
-// Originally from the Calamity Mod source code.
-// Thanks to the Calamity Team for this.
 
 [Autoload(Side = ModSide.Client)]
 public sealed class GeneralParticleHandler : ModSystem

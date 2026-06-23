@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 namespace Arcadia.Core.Systems.Collections;
 
 [ReinitializeDuringResizeArrays]
-public static class ArcadiaNPCTypeSets
+public static class ArcadiaNPCSets
 {
     private static SetFactory Factory = NPCID.Sets.Factory;
 
