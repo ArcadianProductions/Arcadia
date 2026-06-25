@@ -1,6 +1,6 @@
 ﻿# Credits
 
-## Calamity Mod:
+## Azafure LLC (Calamity Mod):
 
 **License:** [Calamity Mod License](https://github.com/CalamityTeam/CalamityModPublic/blob/1.4.4/LICENSE.md)
 
